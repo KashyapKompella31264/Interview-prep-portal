@@ -1,4 +1,4 @@
-FROM openjdk:17-slim
+FROM openjdk:21-jdk-slim
 WORKDIR /app
 
 # Ensure /app directory exists and is writable
