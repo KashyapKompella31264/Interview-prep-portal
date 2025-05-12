@@ -120,7 +120,6 @@ public class CodeExecutionService {
     private Map<String, String> executePythonDocker(String code, String input) throws IOException, InterruptedException {
         return executeDockerContainer(code, input, "python_executor", "py");
     }
-
     // ✅ Execute C++ via Docker
     private Map<String, String> executeCppDocker(String code, String input) throws IOException, InterruptedException {
         return executeDockerContainer(code, input, "cpp_executor", "cpp");
@@ -196,7 +195,6 @@ public class CodeExecutionService {
     // ✅ Execute Process with Input Handling
     private Map<String, String> executeWithInput(Process process, String input) throws IOException, InterruptedException {
         long execStart = System.nanoTime();
-
         if (input != null && !input.isEmpty()) {
             try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(process.getOutputStream()))) {
                 writer.write(input);
@@ -219,6 +217,9 @@ public class CodeExecutionService {
 
         return result;
     }
+
+
+
 
 
     // ✅ Read Process Output (stdout & stderr)
