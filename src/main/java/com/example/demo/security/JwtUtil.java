@@ -43,9 +43,6 @@ public class JwtUtil {
             .signWith(SECRET_KEY, SignatureAlgorithm.HS256)
             .compact();
     }
-
-
-
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
     }
