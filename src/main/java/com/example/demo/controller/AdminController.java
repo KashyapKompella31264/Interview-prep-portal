@@ -259,6 +259,7 @@ public class AdminController {
     @PostMapping("/courses")
     public ResponseEntity<Course> createCourse(@RequestBody Course course) {
     	int generatedId=idGeneratorService.generateId("COURSE");
+    	System.out.println("Course id generated :"+generatedId);
     	course.setId(String.valueOf(generatedId));
         Course createdCourse = courseService.createCourse(course);
         return ResponseEntity.ok(createdCourse);
