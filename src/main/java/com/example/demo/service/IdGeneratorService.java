@@ -36,6 +36,7 @@ public class IdGeneratorService {
             case "COURSE":
             	min = 10000;
             	max = 10500;
+            	break;
             case "SUBTOPIC":
             	min = 10501;
             	max = 20000;
