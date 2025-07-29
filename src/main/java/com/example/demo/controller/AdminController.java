@@ -264,7 +264,10 @@ public class AdminController {
         Course createdCourse = courseService.createCourse(course);
         return ResponseEntity.ok(createdCourse);
     }
-
+    @PostMapping("/subTopic")
+    public ResponseEntity<SubTopic> createsubTopic(@RequestBody SubTopic subTopic){
+    	return ResponseEntity.ok(courseService.crerateanewSubTopic(subTopic));
+    }
     @GetMapping("/courses")
     public ResponseEntity<?> getAllCourses() {
     	List<Course> courses=courseService.getAllCourses();
@@ -378,6 +381,7 @@ public class AdminController {
     	
     	return ResponseEntity.ok(courseService.updateSubTopic(subTopic));
     }
+    
     @GetMapping("/courses/{courseId}/subtopics")
     public ResponseEntity<?> getallsubtopicsforacourse(@PathVariable String courseId){
     	return ResponseEntity.ok(courseService.getallsubtopicsforacourse(courseId));

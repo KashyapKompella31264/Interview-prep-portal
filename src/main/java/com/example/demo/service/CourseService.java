@@ -127,6 +127,12 @@ public class CourseService {
     public List<Course> findCourseByStudentId(String studentId){
     	return courseRepository.findCoursesByRegisteredStudentsContaining(studentId);
     }
+    public SubTopic crerateanewSubTopic(SubTopic subtopic) {
+    	int id=idGeneratorService.generateId("SUBTOPIC");
+    	subtopic.setId(String.valueOf(id));
+    	subTopicRepository.save(subtopic);
+    	return subtopic;
+    }
     public String crerateaNewSubTopic(SubTopic subtopic) {
     	int id=idGeneratorService.generateId("SUBTOPIC");
     	subtopic.setId(String.valueOf(id));
