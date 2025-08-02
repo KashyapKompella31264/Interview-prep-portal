@@ -79,7 +79,8 @@ public class SecurityConfig {
         
         configuration.setAllowedOrigins(List.of(
         		"http://localhost:5173",
-        		"https://kashyapkompella31264.github.io")); 
+        		"https://kashyapkompella31264.github.io,",
+        		"https://interview-prep-portal-frontend.onrender.com")); 
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("Authorization", "Content-Type"));
         configuration.setAllowCredentials(true); // ✅ Allow cookies if needed
