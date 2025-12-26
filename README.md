@@ -26,4 +26,4 @@ A full-stack coding interview platform backend built using Java and Spring Boot.
 2. Configure application.properties  
 3. Run the Spring Boot application
 
-This project demonstrates my backend engineering skills, API design practices, and experience building production-style systems.
+This project demonstrates my backend engineering skills, API design practices, and experience building production-style systems
