@@ -16,13 +16,14 @@ import com.example.demo.repository.StudentRepository;
 
 @Service
 public class StudentService {
-	private final StudentRepository studentRepository;
+	@Autowired
+	private StudentRepository studentRepository;
 	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
 	
-	public StudentService(StudentRepository studentRepository) {
-		this.studentRepository=studentRepository;
-	}
+//	public StudentService(StudentRepository studentRepository) {
+//		this.studentRepository=studentRepository;
+//	}
 	public Optional<Student> findStudentById(String id) {
         return studentRepository.findById(id);
     }

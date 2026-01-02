@@ -13,7 +13,9 @@ public class Student {
 	private String email;
 	private String phno;
 	private String address;
-	
+	public Student() {
+		
+	}
 	public Student(String id,String name,String password,String email) {
 		this.id=id;
 		this.name=name;
