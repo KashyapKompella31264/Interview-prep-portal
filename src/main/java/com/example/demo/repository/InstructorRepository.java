@@ -7,7 +7,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
-
+import org.springframework.stereotype.Repository;
+@Repository
 public interface InstructorRepository extends MongoRepository<Instructor, String> {
 
 	Optional<Instructor> findByEmail(String email);
