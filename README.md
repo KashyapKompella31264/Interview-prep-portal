@@ -16,7 +16,6 @@ A full-stack coding interview platform backend built using Java and Spring Boot.
 - JWT Authentication
 - Docker
 - RESTful APIs
-
 ## Project Structure
 - controller/ – API endpoints
 - service/ – business logic
